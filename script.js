@@ -68,6 +68,7 @@ document.getElementById("j2-b1").addEventListener("click", event => {
     var valor_palabra = document.getElementById("palabra-input").value.toUpperCase();
     var vector = valor_palabra.split("");
     var letra = document.getElementById("letras-select").value;
+    var flag = false;
     if (!vector_letras.includes(letra)) {
         vector_letras.push(letra);
         --contador;
@@ -82,6 +83,7 @@ document.getElementById("j2-b1").addEventListener("click", event => {
             }
             var aux = document.getElementById("oculta-p").textContent.replaceAll(" ", "");
             if (aux == valor_palabra) {
+                flag = true;
                 ganarAhorcado();
                 // Finalizo la función
                 // return;
@@ -90,7 +92,7 @@ document.getElementById("j2-b1").addEventListener("click", event => {
     } else {
         alert("Ya ha seleccionado esa letra");
     }
-    if (contador == 0) {
+    if (contador == 0 && !flag) {
         alert("Se ha quedado sin intentos");
         document.getElementById("letras-select").disabled = true;
         document.getElementById("j2-b1").disabled = true;
