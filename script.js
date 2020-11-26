@@ -42,7 +42,7 @@ inicioAhorcado();
 
 document.getElementById("j1-b").addEventListener("click", event => {
     var valor_palabra = document.getElementById("palabra-input").value.toUpperCase();
-    var expresion = /[A-Z]$/;
+    var expresion = /^[A-Z]+$/i;
     if (valor_palabra != "" && expresion.test(valor_palabra)) {
         // No admite la Ñ
         // document.getElementById("oculta-p").textContent = valor_palabra.replace(/\w/g, "_ ");
