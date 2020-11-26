@@ -27,6 +27,7 @@ function perderAhorcado() {
     alert("Oh, ha perdido ¡pruebe más suerte la próxima vez!");
     document.getElementById("oculta-p").style.backgroundColor = "red";
     finAhorcado();
+    document.getElementById("intentos-p").textContent = 0;
 }
 
 function finAhorcado() {
