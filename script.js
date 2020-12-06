@@ -93,7 +93,7 @@ document.getElementById("j2-b1").addEventListener("click", event => {
         alert("Ya ha seleccionado esa letra");
     }
     if (contador == 0 && !flag) {
-        alert("Se ha quedado sin intentos");
+        // alert("Se ha quedado sin intentos");
         document.getElementById("letras-select").disabled = true;
         document.getElementById("j2-b1").disabled = true;
     }
